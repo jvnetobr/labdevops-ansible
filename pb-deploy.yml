@@ -1,0 +1,22 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+    - name: Install packages
+      ansible.builtin.apt:
+        pkg: 
+        - apache2
+        - php8.2 
+        - php8.2-cli 
+        - php8.2-common 
+        - php8.2-imap 
+        - php8.2-redis 
+        - php8.2-snmp 
+        - php8.2-xml 
+        - php8.2-mysqli 
+        - php8.2-zip 
+        - php8.2-mbstring 
+        - php8.2-curl 
+        - libapache2-mod-php
+        state: latest
+        update_cache: yes
